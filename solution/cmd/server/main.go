@@ -1,12 +1,11 @@
 package main
 
 import (
+	"avenue-golang/solution/internal/api"
 	"fmt"
 	"log"
 	"net/http"
 )
-
-import "avenue-golang/solution/internal/api"
 
 func main() {
 	api.RegisterRoutes()
@@ -15,8 +14,8 @@ func main() {
 		fmt.Fprint(w, "OK")
 	})
 
-	log.Println("Server starting on port 8080...")
+	log.Println("🧠 Iniciando servidor na porta 8080...")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatalf("Server failed to start: %v", err)
+		log.Fatalf("❌ Falha ao iniciar servidor: %v", err)
 	}
 }

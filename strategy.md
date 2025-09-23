@@ -67,3 +67,44 @@ C:/Users/eduar/source/avenue-golang/
             └── transaction.go
 ``` 
 
+Pedi para o gemini gerar uma base para os arquivos, a maior parte do que ele trouxe foi ligar os arquivos aos que eles irão depender (nomear os packages e adicionar imports comentados para uso futuro)
+
+após criar uma base de arquivos para processar a comunicação com o projeto `tatement`, notei que boa parte dos testes são apenas placeholders, testes como por exemplo:
+``` 
+// Verificação de consistência
+func RunConsistencyCheck() {
+	fmt.Println("\n🔍 Executando verificação de consistência...")
+	fmt.Println("==================================================")
+
+	checks := []string{
+		"Verificação de saldos por usuário/conta/moeda",
+		"Verificação de soma de transações",
+		"Verificação de integridade referencial",
+		"Verificação de timestamps",
+		"Verificação de tipos de transação",
+	}
+
+	allPassed := true
+	for i, check := range checks {
+		time.Sleep(100 * time.Millisecond)
+		passed := rand.Float64() > 0.1
+		if !passed {
+			allPassed = false
+		}
+		status := "✅"
+		if !passed {
+			status = "❌"
+		}
+		fmt.Printf("  %s %d. %s\n", status, i+1, check)
+	}
+
+	fmt.Println("\n🎯 Resultado da verificação de consistência:")
+	if allPassed {
+		fmt.Println("✅ Todas as verificações passaram - Sistema consistente")
+	} else {
+		fmt.Println("❌ Algumas verificações falharam - Investigar inconsistências")
+	}
+	fmt.Println("==================================================")
+}
+```
+não oferecem realmente um teste de consistência dos dados recebidos.

@@ -73,6 +73,3 @@ O endpoint `POST /events` receberá um JSON com a seguinte estrutura:
   "created_at": "time.Time"
 }
 ```
-
-
-Pedi para o gemini gerar uma base para os arquivos, a maior parte do que ele trouxe foi ligar os arquivos aos que eles irão depender (nomear os packages e adicionar imports comentados para uso futuro)
