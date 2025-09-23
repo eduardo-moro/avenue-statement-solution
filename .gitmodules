@@ -1,0 +1,3 @@
+[submodule "statement"]
+	path = statement
+	url = git@github.com:eduardo-moro/statement.git
