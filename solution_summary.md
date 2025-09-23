@@ -44,11 +44,11 @@ A comunicação entre o projeto de validação (`statement`) e a sua solução s
 
 ### Endpoints a serem Implementados
 
-| Método | Endpoint                                                     | Descrição                                                                 |
-| :----- | :----------------------------------------------------------- | :------------------------------------------------------------------------ |
-| `POST` | `/events`                                                    | Recebe e processa uma nova transação (evento).                            |
-| `GET`  | `/statement/{userId}/{accountType}/{currencyType}/{period}` | Retorna o extrato de um usuário para uma conta, moeda e período específicos. |
-| `GET`  | `/health`                                                    | Verifica se a aplicação está no ar.                                       |
+| Método | Endpoint                                                       |Descrição                                                                     |
+| :----- | :-----------------------------------------------------------   |:------------------------------------------------------------------------     |
+| `POST` | `/events`                                                      | Recebe e processa uma nova transação (evento).                               |
+| `GET`  | `/statement/{userId}/{accountType}/{currencyType}/{period}`    | Retorna o extrato de um usuário para uma conta, moeda e período específicos. |
+| `GET`  | `/health`                                                      | Verifica se a aplicação está no ar.                                          |
 
 ### Estrutura de Dados (`POST /events`)
 
@@ -73,3 +73,6 @@ O endpoint `POST /events` receberá um JSON com a seguinte estrutura:
   "created_at": "time.Time"
 }
 ```
+
+
+Pedi para o gemini gerar uma base para os arquivos, a maior parte do que ele trouxe foi ligar os arquivos aos que eles irão depender (nomear os packages e adicionar imports comentados para uso futuro)
