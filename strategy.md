@@ -315,3 +315,6 @@ baseado na estrutura definida acima, gerei o arquivo folder-structure.md explica
 Vou começar fazendo os dockerfiles para o projeto
 
 Para não perder muito tempo com analise de imagens diversas, vou dar preferências para as imagens padrão de cada tecnologia utilizada, principalmente se utilizarem alpine, por afinidade.
+
+Criei juntamente ao gemini os dockerfiles basicos para os serviços da solução, também fiz alguns ajustes na estrutura das pastas do projeto, a estrutura anterior não estava permitindo o workspace ler o pkg do projeto (com códigos comuns como models e utils)
+
