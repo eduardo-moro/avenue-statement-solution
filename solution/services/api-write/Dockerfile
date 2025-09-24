@@ -2,12 +2,14 @@ FROM golang:1.24-alpine
 
 WORKDIR /app
 
-COPY go.mod ./
-RUN go mod download
-
+# Copy everything
 COPY . .
 
-RUN go build -o /docker-go-app ./cmd/main.go
+# Download dependencies
+RUN go work sync
+
+# Build the application
+RUN go build -o /docker-go-app ./services/api-write/cmd/main.go
 
 EXPOSE 8080
 

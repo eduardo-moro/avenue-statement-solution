@@ -2,6 +2,7 @@
 solution/
 │── docker-compose.yml          # Orquestração de todos os serviços
 │── .env                        # Variáveis de ambiente globais
+│── go.work                     # Go Workspace file
 │
 ├── services/
 │   ├── api-write/              # API de comandos (transações)
@@ -26,19 +27,19 @@ solution/
 │   │   ├── go.mod
 │   │   └── Dockerfile
 │   │
-│   └── client-tui/             # Cliente TUI em Go
-│       ├── cmd/
-│       │   └── main.go
-│       ├── internal/
-│       │   ├── ui/             # Interface TUI (bubbletea)
-│       │   └── api/            # Cliente HTTP para chamar APIs (/write, /read)
-│       ├── go.mod
-│       └── Dockerfile
-│
-├── pkg/                        # Código compartilhado
-│   ├── models/                 # Structs: User, Account, TransactionEvent, Metadata
-│   ├── events/                 # Definição de eventos (TransacaoRegistrada)
-│   └── utils/                  # Funções utilitárias (UUID, logger, etc.)
+│   ├── client-tui/             # Cliente TUI em Go
+│   │   ├── cmd/
+│   │   │   └── main.go
+│   │   ├── internal/
+│   │   │   ├── ui/             # Interface TUI (bubbletea)
+│   │   │   └── api/            # Cliente HTTP para chamar APIs (/write, /read)
+│   │   ├── go.mod
+│   │   └── Dockerfile
+│   │
+│   └── pkg/                    # Código compartilhado
+│       ├── models/             # Structs: User, Account, TransactionEvent, Metadata
+│       ├── events/             # Definição de eventos (TransacaoRegistrada)
+│       └── utils/              # Funções utilitárias (UUID, logger, etc.)
 │
 ├── infra/                      # Infraestrutura
 │   ├── mongo/                  # DBWrite

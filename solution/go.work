@@ -1,0 +1,8 @@
+go 1.24
+
+use (
+    ./services/api-read
+    ./services/api-write
+    ./services/pkg
+    ./services/client-tui
+)
